@@ -9,7 +9,7 @@ const http = require('http')
 
 
 //Mongo DB Connect
-mongoose.connect("mongodb+srv://tezt:Windows.2000@cluster0-gpynn.mongodb.net/testdb?retryWrites=true&w=majority"
+mongoose.connect(process.env.MONGO_URI
     , {useNewUrlParser: true, useUnifiedTopology: true});
 
 //Redis cache error logger
@@ -22,9 +22,9 @@ const app = express()
 
 //Init Redis Middleware
 app.use(session(
-    {   secret: 'zecret',
-        name: 'redisredis',
-        store: new redisStore({host: 'localhost', port: 6379, client: redisClient, ttl: 86400}) 
+    {   secret: process.env.SESSION_SECRET,
+        name: 'redis',
+        store: new redisStore({host: 'localhost', port: process.env.REDIS_PORT, client: redisClient, ttl: 86400}) 
 }))
 
 //????
