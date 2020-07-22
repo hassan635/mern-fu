@@ -7,6 +7,7 @@ const redisClient = redis.createClient();
 const redisStore = require('connect-redis')(session);
 const http = require('http')
 const user_routes = require('./controller/user_routes')
+const info_routes = require('./controller/info_routes')
 
 
 //Mongo DB Connect
@@ -34,6 +35,7 @@ app.use(express.urlencoded({ extended: false }))
 
 //routes inclusion
 app.use("/user", user_routes)
+app.use("/info", info_routes)
 
 //Set view engine
 app.set('views', './src/views')
