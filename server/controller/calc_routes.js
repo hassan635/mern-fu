@@ -11,3 +11,7 @@ router.get("/add", (req,res) => {
 router.get("/subtract", (req,res) => {
     res.send("/subtract")
 })
+
+router.get("/multiply", (req,res) => {
+    res.send("multiply")
+})
