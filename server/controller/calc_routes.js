@@ -15,3 +15,7 @@ router.get("/subtract", (req,res) => {
 router.get("/multiply", (req,res) => {
     res.send("multiply")
 })
+
+router.get("/divide", (req,res) => {
+    res.send("divide")
+})
