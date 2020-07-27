@@ -19,3 +19,7 @@ router.get("/multiply", (req,res) => {
 router.get("/divide", (req,res) => {
     res.send("divide")
 })
+
+router.get("/memory", (req,res) => {
+    res.send("result saved in memory"
+})
