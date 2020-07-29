@@ -21,9 +21,13 @@ router.get("/divide", (req,res) => {
 })
 
 router.get("/memory", (req,res) => {
-    res.send("result saved in memory"
+    res.send("result saved in memory")
 })
 
 router.post("/postadd", (req,res) => {
-    res.send("add with post"
+    res.send("add with post")
+})
+
+router.delete("clear_memory", (req, res) => {
+    res.send("momory cleared")
 })
